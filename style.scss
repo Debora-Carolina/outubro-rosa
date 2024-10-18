@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+header {
+  height: 15vh;
+  background-color: #FF69B4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+
+  @media (max-width: 770px) {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  color: white;
+
+  h1 {
+    margin-left: 1rem;
+    font-size: 1.7vw;
+
+    @media (max-width: 770px) {
+      font-size: 2.5vw;
+    }
+    @media (max-width: 500px) {
+      font-size: 3.1vw;
+    }
+  }
+
+  img {
+    width: 9vw;
+
+    @media (max-width: 770px) {
+      width: 12vw;
+    }
+    @media (max-width: 500px) {
+      width: 15vw;
+    }
+  }
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+
+  a {
+    color: white;
+    font-size: 1.5vw;
+
+    @media (max-width: 770px) {
+      font-size: 2.3vw;
+    }
+    @media (max-width: 500px) {
+      font-size: 3vw;
+    }
+  }
+}
+
+main {
+  background-color: #FFD9EC;
+  padding: 2rem;
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  .awareness {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FF69B4;
+    padding: 2rem;
+    color: white;
+
+    p {
+      max-width: 500px;
+    }
+
+    img {
+      width: 50%;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+
+      img {
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .tips {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .tip-item {
+      text-align: center;
+      margin: 0.5rem;
+      width: 20%;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        color: #333;
+      }
+
+      @media (max-width: 768px) {
+        width: 40%;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #FF69B4;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .social-media img {
+    width: 2rem;
+    margin-right: 1rem;
+  }
+
+  .credits {
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .footer-logo img {
+    width: 8rem;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+
+    .footer-logo {
+      margin-top: 1rem;
+    }
+  }
+}

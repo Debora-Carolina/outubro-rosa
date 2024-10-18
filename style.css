@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+header {
+  height: 15vh;
+  background-color: #FF69B4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+@media (max-width: 770px) {
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.logo-container h1 {
+  margin-left: 1rem;
+  font-size: 1.7vw;
+}
+@media (max-width: 770px) {
+  .logo-container h1 {
+    font-size: 2.5vw;
+  }
+}
+@media (max-width: 500px) {
+  .logo-container h1 {
+    font-size: 3.1vw;
+  }
+}
+.logo-container img {
+  width: 9vw;
+}
+@media (max-width: 770px) {
+  .logo-container img {
+    width: 12vw;
+  }
+}
+@media (max-width: 500px) {
+  .logo-container img {
+    width: 15vw;
+  }
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+nav ul a {
+  color: white;
+  font-size: 1.5vw;
+}
+@media (max-width: 770px) {
+  nav ul a {
+    font-size: 2.3vw;
+  }
+}
+@media (max-width: 500px) {
+  nav ul a {
+    font-size: 3vw;
+  }
+}
+
+main {
+  background-color: #FFD9EC;
+  padding: 2rem;
+}
+main section {
+  margin-bottom: 2rem;
+}
+main .awareness {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FF69B4;
+  padding: 2rem;
+  color: white;
+}
+main .awareness p {
+  max-width: 500px;
+}
+main .awareness img {
+  width: 50%;
+}
+@media (max-width: 768px) {
+  main .awareness {
+    flex-direction: column;
+    text-align: center;
+  }
+  main .awareness img {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+main .tips {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+main .tips .tip-item {
+  text-align: center;
+  margin: 0.5rem;
+  width: 20%;
+}
+main .tips .tip-item img {
+  width: 100%;
+}
+main .tips .tip-item p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+@media (max-width: 768px) {
+  main .tips .tip-item {
+    width: 40%;
+  }
+}
+
+footer {
+  background-color: #FF69B4;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .social-media img {
+  width: 2rem;
+  margin-right: 1rem;
+}
+footer .credits {
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+footer .footer-logo img {
+  width: 8rem;
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .footer-logo {
+    margin-top: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */
