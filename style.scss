@@ -1,167 +1,144 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap');
 
+// Variáveis
+$primary-color: #FF69B4;
+$secondary-color: #FFD9EC;
+$text-color: white;
+
+// Reset básico
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+// Corpo do documento
 body {
   font-family: "Noto Sans", sans-serif;
+  background-color: $secondary-color;
 }
 
+// Cabeçalho
 header {
-  height: 15vh;
-  background-color: #FF69B4;
+  height: auto;
+  background-color: $primary-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 1rem;
+  flex-wrap: wrap;
 
-  @media (max-width: 770px) {
-    flex-direction: column;
-    height: auto;
-  }
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  color: white;
-
-  h1 {
-    margin-left: 1rem;
-    font-size: 1.7vw;
-
-    @media (max-width: 770px) {
-      font-size: 2.5vw;
-    }
-    @media (max-width: 500px) {
-      font-size: 3.1vw;
-    }
-  }
-
-  img {
-    width: 9vw;
-
-    @media (max-width: 770px) {
-      width: 12vw;
-    }
-    @media (max-width: 500px) {
-      width: 15vw;
-    }
-  }
-}
-
-nav ul {
-  display: flex;
-  gap: 1.5rem;
-
-  a {
-    color: white;
-    font-size: 1.5vw;
-
-    @media (max-width: 770px) {
-      font-size: 2.3vw;
-    }
-    @media (max-width: 500px) {
-      font-size: 3vw;
-    }
-  }
-}
-
-main {
-  background-color: #FFD9EC;
-  padding: 2rem;
-
-  section {
-    margin-bottom: 2rem;
-  }
-
-  .awareness {
+  .logo-header {
     display: flex;
     align-items: center;
+    color: $text-color;
+
+    h1 {
+      margin-left: 1rem;
+      font-size: 1.5rem;
+    }
+
+    img {
+      width: 50px;
+      height: auto;
+    }
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+
+    a {
+      color: $text-color;
+      font-size: 1.2rem;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Conteúdo principal
+main {
+  padding: 4rem;
+
+  .maos,
+  .pessoas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    background-color: #FF69B4;
-    padding: 2rem;
-    color: white;
+    margin-bottom: 2rem;
+    color: black;
+    background-color: $secondary-color;
+    padding: 1rem;
 
     p {
       max-width: 500px;
     }
 
     img {
-      width: 50%;
-    }
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-      text-align: center;
-
-      img {
-        width: 100%;
-        margin-top: 1rem;
-      }
+      width: 45%;
+      max-width: 400px;
+      height: auto;
     }
   }
 
-  .tips {
+  .pessoas {
+    background-color: $primary-color;
+    color: $text-color;
+  }
+
+  .imagens {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 
-    .tip-item {
-      text-align: center;
-      margin: 0.5rem;
+    img {
       width: 20%;
+      min-width: 150px;
+      margin: 0.5rem;
+    }
+  }
+}
 
+.footer {
+    background-color: $primary-color;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between; /* Itens espaçados horizontalmente */
+    align-items: center; /* Itens alinhados verticalmente */
+    flex-wrap: nowrap; /* Garantir que os itens fiquem na mesma linha */
+    
+    // Seção das mídias sociais
+    .midias {
+      display: flex;
+      align-items: center;
+      gap: 1rem; /* Espaço entre os ícones */
+  
       img {
-        width: 100%;
-      }
-
-      p {
-        margin-top: 0.5rem;
-        font-size: 1rem;
-        color: #333;
-      }
-
-      @media (max-width: 768px) {
-        width: 40%;
+        width: 2rem;
       }
     }
-  }
-}
-
-footer {
-  background-color: #FF69B4;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-
-  .social-media img {
-    width: 2rem;
-    margin-right: 1rem;
-  }
-
-  .credits {
-    color: white;
-    text-align: center;
-    width: 100%;
-    margin: 0.5rem 0;
-  }
-
-  .footer-logo img {
-    width: 8rem;
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
-
+  
+    // Seção de textos do rodapé (Créditos)
+    .aluna_instrutor_facilitador {
+      color: $text-color;
+      text-align: center;
+      font-size: 0.8rem; /* Tamanho reduzido da fonte */
+      flex-grow: 1; /* Ocupa o espaço central */
+      margin: 0; /* Remover margens */
+    }
+  
+    // Seção da logo do rodapé
     .footer-logo {
-      margin-top: 1rem;
+      display: flex;
+      justify-content: flex-end;
+      img {
+        width: 2.5rem; /* Tamanho reduzido da logo */
+      }
     }
   }
-}

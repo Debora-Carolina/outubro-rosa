@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap");
 * {
   margin: 0;
@@ -7,157 +8,113 @@
 
 body {
   font-family: "Noto Sans", sans-serif;
+  background-color: #FFD9EC;
 }
 
 header {
-  height: 15vh;
+  height: auto;
   background-color: #FF69B4;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 1rem;
+  flex-wrap: wrap;
 }
-@media (max-width: 770px) {
-  header {
-    flex-direction: column;
-    height: auto;
-  }
-}
-
-.logo-container {
+header .logo-header {
   display: flex;
   align-items: center;
   color: white;
 }
-.logo-container h1 {
+header .logo-header h1 {
   margin-left: 1rem;
-  font-size: 1.7vw;
+  font-size: 1.5rem;
 }
-@media (max-width: 770px) {
-  .logo-container h1 {
-    font-size: 2.5vw;
-  }
+header .logo-header img {
+  width: 50px;
+  height: auto;
 }
-@media (max-width: 500px) {
-  .logo-container h1 {
-    font-size: 3.1vw;
-  }
-}
-.logo-container img {
-  width: 9vw;
-}
-@media (max-width: 770px) {
-  .logo-container img {
-    width: 12vw;
-  }
-}
-@media (max-width: 500px) {
-  .logo-container img {
-    width: 15vw;
-  }
-}
-
-nav ul {
+header nav ul {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
+  list-style: none;
 }
-nav ul a {
+header nav ul a {
   color: white;
-  font-size: 1.5vw;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
-@media (max-width: 770px) {
-  nav ul a {
-    font-size: 2.3vw;
-  }
-}
-@media (max-width: 500px) {
-  nav ul a {
-    font-size: 3vw;
-  }
+header nav ul a:hover {
+  text-decoration: underline;
 }
 
 main {
-  background-color: #FFD9EC;
-  padding: 2rem;
+  padding: 4rem;
 }
-main section {
-  margin-bottom: 2rem;
-}
-main .awareness {
+main .maos,
+main .pessoas {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background-color: #FF69B4;
-  padding: 2rem;
-  color: white;
+  margin-bottom: 2rem;
+  color: black;
+  background-color: #FFD9EC;
+  padding: 1rem;
 }
-main .awareness p {
+main .maos p,
+main .pessoas p {
   max-width: 500px;
 }
-main .awareness img {
-  width: 50%;
+main .maos img,
+main .pessoas img {
+  width: 45%;
+  max-width: 400px;
+  height: auto;
 }
-@media (max-width: 768px) {
-  main .awareness {
-    flex-direction: column;
-    text-align: center;
-  }
-  main .awareness img {
-    width: 100%;
-    margin-top: 1rem;
-  }
+main .pessoas {
+  background-color: #FF69B4;
+  color: white;
 }
-main .tips {
+main .imagens {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-main .tips .tip-item {
-  text-align: center;
-  margin: 0.5rem;
+main .imagens img {
   width: 20%;
-}
-main .tips .tip-item img {
-  width: 100%;
-}
-main .tips .tip-item p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #333;
-}
-@media (max-width: 768px) {
-  main .tips .tip-item {
-    width: 40%;
-  }
+  min-width: 150px;
+  margin: 0.5rem;
 }
 
-footer {
+.footer {
   background-color: #FF69B4;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Itens espaçados horizontalmente */
+  align-items: center; /* Itens alinhados verticalmente */
+  flex-wrap: nowrap; /* Garantir que os itens fiquem na mesma linha */
+}
+.footer .midias {
+  display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 1rem; /* Espaço entre os ícones */
 }
-footer .social-media img {
+.footer .midias img {
   width: 2rem;
-  margin-right: 1rem;
 }
-footer .credits {
+.footer .aluna_instrutor_facilitador {
   color: white;
   text-align: center;
-  width: 100%;
-  margin: 0.5rem 0;
+  font-size: 0.8rem; /* Tamanho reduzido da fonte */
+  flex-grow: 1; /* Ocupa o espaço central */
+  margin: 0; /* Remover margens */
 }
-footer .footer-logo img {
-  width: 8rem;
+.footer .footer-logo {
+  display: flex;
+  justify-content: flex-end;
 }
-@media (max-width: 768px) {
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
-  footer .footer-logo {
-    margin-top: 1rem;
-  }
-}/*# sourceMappingURL=style.css.map */
+.footer .footer-logo img {
+  width: 2.5rem; /* Tamanho reduzido da logo */
+}
+
+/*# sourceMappingURL=style.css.map */
